@@ -1,0 +1,670 @@
+body{
+    background-image: url(../images/india.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    top: 0;
+    overflow-x: hidden;
+}
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    margin-top:50%;
+    position:relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+  }
+  
+  input:checked + .slider {
+    background-color: #522ba7;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+  }
+.navigation{
+    position: sticky;
+    height: 30px;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a:hover{
+    text-shadow: 2px 0px 5px rgb(255, 228, 108);
+    text-decoration: underline;
+}
+
+body.dark-theme{
+    background-image: url(../images/india_dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    overflow-x: hidden;
+}
+body.dark-theme h1 {
+    text-shadow: 2px 0px 5px rgb(255, 255, 255);
+}
+.find label{
+    color: black;
+}
+#theme-button {
+    padding: 10px 20px;
+    border: none;
+    height: 50px;
+    width: 100px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #e2e2e2;
+    color: black;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+body.dark-theme #theme-button {
+    background-color: #333;
+    color: white;
+}
+
+body.light-theme {
+    background-image: url(../images/india.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    color: black; 
+}
+body.dark-theme hr{
+    border: 2px solid white;
+}
+
+body.dark-theme {
+    margin: 0;
+    color: white;
+    background-image: url(../images/india_dark.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Site-Name{
+    display: flex;
+    justify-content: center;
+}
+.Site-Name img{
+    width: 250px;
+    height: 250px;
+    filter: drop-shadow(5px 5px 10px rgb(255, 255, 255));
+    margin: auto 0;
+}
+svg{
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+.find{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 40%;
+    padding: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.568);
+    border-radius: 20px;
+    box-shadow: 5px 15px 40px rgb(0, 0, 0);
+}
+
+.state-selection{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 40px;
+}
+
+.state-selection label{
+    margin-right: 10px;
+}
+
+#state-select{
+    border-radius: 20px;
+    border: 1px solid black;   
+    text-align: center;
+    padding: 5px;
+
+}
+
+#state-select:hover{
+    background-color: rgb(197, 197, 197);
+}
+
+.wrap-input-17 * {
+    box-sizing: border-box;
+    
+   }
+   
+   .wrap-input-17 .search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+   }
+   
+   .wrap-input-17 .input-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: 
+   #fff;
+    padding-right: 40px;
+    color:
+   #fff;
+   }
+   .wrap-input-17 .input-search::placeholder{
+    color:
+   rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+   }
+   .wrap-input-17 .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:
+   #ffffff ;
+    background-color:
+   transparent;
+    pointer-events: painted;  
+   }
+   .wrap-input-17 .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: 
+   transparent;
+    border-bottom:1px solid 
+   rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+   }
+   .wrap-input-17 .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: 
+   transparent;
+    border-bottom:1px solid 
+   rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+   }
+
+.btn-54,
+.btn-54 *,
+.btn-54 :after,
+.btn-54 :before,
+.btn-54:after,
+.btn-54:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-54 {
+  -webkit-tap-highlight-color: 
+transparent;
+  -webkit-appearance: button;
+  background-color: 
+#000;
+  background-image: none;
+  color: 
+#fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn-54:disabled {
+  cursor: default;
+}
+.btn-54:-moz-focusring {
+  outline: auto;
+}
+.btn-54 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-54 [hidden] {
+  display: none;
+}
+.btn-54 {
+  box-sizing: border-box;
+  font-weight: 900;
+  padding: 1.8rem 5rem;
+  position: relative;
+  text-transform: uppercase;
+  background: none;
+}
+.btn-54 .content,
+.btn-54 .depth,
+.btn-54 .shadow {
+  transition: transform 0.2s;
+}
+.btn-54 .content {
+  background: #fff;
+  color: #000;
+  display: grid;
+  height: 84%;
+  left: 0;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.btn-54 .depth {
+  background: #ccc;
+  height: 10%;
+  top: 84%;
+}
+.btn-54 .depth,
+.btn-54 .shadow {
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.btn-54 .shadow {
+  background: 
+#777;
+  height: 6%;
+  top: 94%;
+}
+.btn-54:hover .content {
+  transform: translateY(4%);
+}
+.btn-54:hover .shadow {
+  transform: translateY(-20%);
+}
+.btn-54:active .content {
+  transform: translateY(8%);
+}
+.btn-54:active .shadow {
+  transform: translateY(-30%);
+}
+
+.navigation a{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    font-size: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: glow 2s ease-in-out;
+}
+
+@keyframes glow{
+    0%{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    40%{
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1),0 0 15px rgba(255, 255, 255, 0.8);
+    }
+    80%{
+        text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 7px rgba(255, 255, 255, 0.8);
+    }
+    100%{
+        text-shadow: none;
+    }
+}
+
+hr{
+    border: 1px solid black;
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+path{
+    stroke: black;
+}
+
+.search{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+input[type="text"]{
+    width: 500px;
+    max-width:min-content;
+    height: 45px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer{
+    background: rgba(255, 255, 255, 0.336);
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input[type="submit"]:hover{
+    background-color: green;
+}
+
+input[type="text"]:hover{
+    background-color: rgb(180, 180, 180);
+}
+
+h2{
+    font-size: 60px;
+}
+
+h3{
+    font-size: 40px;
+}
+
+p{
+    font-size: 35px;
+    color: white;
+}
+
+#IN-AN{
+    fill: aqua;
+}
+#IN-AN:hover{
+    fill: rgb(2, 199, 199);
+    font-size: 20px;
+    color: black;
+}
+#IN-AP{
+    fill: rgb(255, 107, 132);
+}
+#IN-AP:hover{
+    fill: rgb(247, 80, 108);
+}
+#IN-AR{
+    fill: rgb(250, 70, 70);
+}
+#IN-AR:hover{
+    fill: rgb(250, 48, 48);
+}
+#IN-AS{
+    fill: rgb(156, 255, 156);
+}
+#IN-AS:hover{
+    fill: rgb(113, 255, 113);
+}
+#IN-BR{
+    fill: rgb(96, 0, 134);
+}
+#IN-BR:hover{
+    fill: rgb(78, 1, 109);
+}
+#IN-CH{
+    fill: red;
+}
+#IN-CH:hover{
+    fill: rgb(95, 0, 0);
+}
+#IN-CT{
+    fill: rgb(56, 199, 255);
+}
+#IN-CT:hover{
+    fill: rgb(0, 178, 248);
+}
+#IN-DD{
+    fill: red;
+}
+#IN-DD:hover{
+    fill: rgb(95, 0, 0);
+}
+#IN-DL{
+    fill: rgb(223, 160, 0);
+}
+#IN-DL:hover{
+    fill: rgb(141, 101, 0);
+}
+#IN-DN{
+    fill: red;
+}
+#IN-DN:hover{
+    fill: rgb(95, 0, 0);
+}
+#IN-GA{
+    fill: rgb(216, 155, 1);
+}
+#IN-GA:hover{
+    fill: rgb(141, 101, 0);
+}
+#IN-GJ{
+    fill: rgb(255, 236, 185);
+}
+#IN-GJ:hover{
+    fill: rgb(252, 205, 76);
+}
+#IN-HP{
+    fill: rgb(156, 255, 156);
+}
+#IN-HP:hover{
+    fill: rgb(113, 255, 113);
+}
+#IN-HR{
+    fill: rgb(56, 199, 255);
+}
+#IN-HR:hover{
+    fill: rgb(0, 183, 255);
+}
+#IN-JH{
+    fill: rgb(255, 236, 185);
+}
+#IN-JH:hover{
+    fill: rgb(252, 205, 76);
+}
+#IN-JK{
+    fill: rgb(250, 70, 70);
+}
+
+#IN-JK:hover{
+    fill: rgb(250, 48, 48);
+}
+#IN-KA{
+    fill: rgb(96, 0, 134);
+}
+#IN-KA:hover{
+    fill: rgb(78, 1, 109);
+}
+#IN-KL{
+    fill: rgb(216, 155, 1);
+}
+#IN-KL:hover{
+    fill: rgb(141, 101, 0);
+}
+#IN-LD{
+    fill: red;
+}
+#IN-LD:hover{
+    fill: rgb(95, 0, 0);
+}
+#IN-MH{
+    fill: rgb(255, 107, 132);
+}
+#IN-MH:hover{
+    fill: rgb(247, 80, 108);
+}
+#IN-ML{
+    fill: rgb(216, 155, 1);
+}
+#IN-ML:hover{
+    fill: rgb(141, 101, 0);
+}
+#IN-MN{
+    fill: rgb(96, 0, 134);
+}
+#IN-MN:hover{
+    fill: rgb(78, 1, 109);
+}
+#IN-MP{
+    fill: rgb(173, 132, 189);
+}
+#IN-MP:hover{
+    fill: rgb(144, 103, 160);
+}
+#IN-MZ{
+    fill: rgb(255, 236, 185);
+}
+#IN-MZ:hover{
+    fill: rgb(252, 205, 76);
+}
+#IN-NL{
+    fill: rgb(56, 199, 255);
+}
+#IN-NL:hover{
+    fill: rgb(0, 183, 255);
+}
+#IN-OR{
+    fill: rgb(216, 155, 1);
+}
+#IN-OR:hover{
+    fill: rgb(141, 101, 0);
+}
+#IN-PB{
+    fill: rgb(216, 155, 1);
+}
+#IN-PB:hover{
+    fill: rgb(141, 101, 0);
+}
+#IN-PY{
+    fill: red;
+}
+#IN-PY:hover{
+    fill: rgb(95, 0, 0);
+}
+#IN-RJ{
+    fill: rgb(96, 0, 134);
+}
+#IN-RJ:hover{
+    fill: rgb(78, 1, 109);
+}
+#IN-SK{
+    fill: rgb(216, 155, 1);
+}
+#IN-SK:hover{
+    fill: rgb(141, 101, 0);
+}
+#IN-TG{
+    fill: rgb(156, 255, 156);
+}
+#IN-TG:hover{
+    fill: rgb(113, 255, 113);
+}
+#IN-TN{
+    fill: rgb(156, 255, 156);
+}
+#IN-TN:hover{
+    fill: rgb(113, 255, 113);
+}
+#IN-TR{
+    fill: rgb(250, 70, 70);
+}
+#IN-TR:hover{
+    fill: rgb(250, 48, 48);
+}
+#IN-UP{
+    fill: rgb(156, 255, 156);
+}
+#IN-UP:hover{
+    fill: rgb(113, 255, 113);   
+}
+#IN-UT{
+    fill: rgb(152, 0, 212);
+}
+#IN-UT:hover{
+    fill: rgb(105, 1, 146);
+}
+#IN-WB{
+    fill: rgb(56, 199, 255);
+}
+#IN-WB:hover{
+    fill: rgb(0, 183, 255);
+}

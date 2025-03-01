@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: auto;
+  padding: 20px;
+  background-image: url('../images/review.png');
+  background-size: cover;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #020202;
+  font-size: 50px;
+  text-shadow: 5px 2px 2px #e074bc;
+}
+
+#reviewForm {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #745060;
+  background-color: #ca8eaa85;
+  border-radius: 5px;
+  width: 500px;
+  border-radius: 20px;
+  
+}
+
+#reviewForm label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+#reviewForm select,
+#reviewForm textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.input {
+  color: rgb(0, 0, 0);
+  border: 2px solid #ce5fb6;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  max-width: 190px;
+}
+.input:hover{
+box-shadow: 2px 2px 15px #d84cba inset;
+transition: 0.5s ease-in-out;
+}
+
+.input:active {
+  box-shadow: 2px 2px 15px #d84cba inset;
+}
+
+.button {
+  color: black;
+  width: 150px;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #c24981;
+}
+
+.button span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.button:active {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}

@@ -1,0 +1,137 @@
+body{
+    background-image: url(../images/State.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Info{
+    background-color: rgba(187, 187, 187, 0.329);
+    width: 60%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 1, 83);
+    padding: 10px;
+    margin-bottom: 100px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    color: rgb(0, 134, 22);
+    padding: 10px 10px 50px 10px;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
+    animation: glow 2s ease-in-out;
+}
+@keyframes glow{
+    0%{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    40%{
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1),0 0 15px rgba(255, 255, 255, 0.8);
+    }
+    80%{
+        text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 7px rgba(255, 255, 255, 0.8);
+    }
+    100%{
+        text-shadow: none;
+    }
+}
+.CM, .population, .capital, .language, .weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+    text-shadow: 2px 2px 2px rgb(114, 114, 114);
+    color: rgb(0, 0, 0);
+}
+p{
+    font-size: 25px;
+    padding: 10px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0);
+    vertical-align: middle;
+}
+.places, .food{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+.card {
+    position: relative;
+    width: 500px; 
+    height: 400px; 
+    perspective: 1000px;
+    margin: 10px;
+    padding: 50px;
+    display: inline-block;
+    overflow: visible;
+}
+.card img {
+    width: 500px;
+    height: 400px;
+    object-fit:cover;
+    border-radius: 10px;
+}
+
+.card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(7, 7, 7, 0.8);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+    overflow: auto;
+    white-space: normal;
+    max-height: 100%;
+}
+
+.card:hover .card-details {
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s ease-in-out;
+    box-shadow: 3px 3px 3px rgb(255, 255, 255,0.4);
+}
+
+.card:hover > :not(:hover){
+    filter: blur(5px);
+    opacity: 0.5;
+}
+
+.card:hover img {
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+}
+.history{
+    background-color: rgba(136, 136, 136, 0.418);
+    width: 100vw;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+}

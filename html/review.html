@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Customer Reviews</title>
+        <link rel="stylesheet" href="../css/review.css">
+        <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    </head>
+    <body>
+        <h1>Customer Reviews</h1>
+        <form id="reviewForm">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value>Select Rating</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+
+            <label for="comment">Comment:</label>
+            <input
+                placeholder="Type something here...."
+                class="input"
+                name="text"
+                type="text" id="comment"/>
+            <br><br>
+            <button class="button">
+                <span>Submit</span>
+            </button>
+
+        </form>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                emailjs.init("gwlmzdC3exS0EExIg"); // Replace with your actual EmailJS public key
+        
+                document.getElementById('reviewForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+            
+                const rating = document.getElementById('rating').value;
+                const comment = document.getElementById('comment').value;
+            
+                const templateParams = {
+                    rating: rating,
+                    comment: comment,
+                    to_email: 'daksh.kumar@bcah.christuniversity.in'
+                };
+            
+                emailjs.send('service_bk5kuhv', 'template_lkiscwh', templateParams)
+                    .then(function(response) {
+                        console.log('Email sent successfully!', response.status, response.text);
+                        alert('Thanks for your review!');
+                        document.getElementById('reviewForm').reset();
+                    }, function(error) {
+                        console.log('Failed to send email.', error);
+                        alert('Failed to send email: ' + error.text);
+                    });
+            });
+        });
+    </script>
+
+    </body>
+</html>

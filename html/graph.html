@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Graph</title>
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/graph.css">
+</head>
+<body>
+    <h1>State Population Graph</h1>
+    <button id="generateGraph">Generate Graph</button><br><br><br>
+    <canvas id="populationChart" width="auto" height="100%" style="display: none;"></canvas>
+    <script>
+        document.getElementById('generateGraph').addEventListener('click', function() {
+            fetch('/data')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const states = data.map(item => item.State);
+                    const populations = data.map(item => item.Population);
+
+                    const ctx = document.getElementById('populationChart').getContext('2d');
+                    const populationChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: states,
+                            datasets: [{
+                                label: 'Population',
+                                data: populations,
+                                backgroundColor: 'rgba(75, 192, 192, 1)',
+                                borderColor: 'rgb(255,255,255)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    labels: {
+                                        color: 'white' 
+                                    }
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    grid:{
+                                        color: 'black'
+                                    },
+                                    ticks: {
+                                        color: 'white' 
+                                    }
+                                },
+                                x: {
+                                    grid:{
+                                        color: 'black'
+                                    },
+                                    ticks: {
+                                        color: 'white' 
+                                    }
+                                }
+                            }
+                        }
+                    });
+
+                    document.getElementById('populationChart').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        });
+    </script>
+</body>
+</html>
